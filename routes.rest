@@ -1,0 +1,31 @@
+//Get All Familias
+GET http://localhost:4000/familias
+###
+//Create
+POST http://localhost:4000/familias
+Content-Type: application/json
+
+{
+    "apellido": "Fernandez",
+    "ubicacion":{"barrio" : "Pico", "partido": "Roca","provincia":"La pampa"},
+    "estado": "No Chequeado"
+}
+###
+//Get by apellido
+GET http://localhost:4000/familias/Apellido/Fernandez
+
+###
+//Get by Barrio
+GET http://localhost:4000/familias/Barrio/Bernal
+###
+//Get by Partido
+GET http://localhost:4000/familias/Partido/Quilmes
+###
+//Get by Provincia
+GET http://localhost:4000/familias/Provincia/La Pampa
+###
+//Get by Estado
+GET http://localhost:4000/familias/Estado/Chequeado
+###
+//Delete one
+DELETE http://localhost:4000/familias/63e41cef05ba36d34d0d2995
